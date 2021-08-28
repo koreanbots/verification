@@ -47,7 +47,7 @@ body:
     id: privacy-policy
     attributes:
       label: 개인정보에 관한 안내
-      description: 개인정보에 관한 안내는 서비스에 어떻게 안내되어 있나요? 또한 개인정보취급방침을 기재해주세요!
+      description: 개인정보에 관한 안내는 서비스에 어떻게 안내되어 있나요? 또한 개인정보 취급 방침을 기재해주세요!
     validations:
       required: true
   - type: input
