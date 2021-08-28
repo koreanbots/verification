@@ -1,5 +1,5 @@
 name: 봇 인증 신청
-description: 봇 인증을 신청합니다.
+description: 봇의 인증을 신청합니다.
 title: 봇 이름으로 변경해주세요
 body:
   - type: markdown
