@@ -1,0 +1,105 @@
+name: 봇 인증 신청
+description: 봇의 인증을 신청합니다.
+title: (봇 이름으로 변경해주세요)
+body:
+  - type: markdown
+    attributes:
+      value: |
+        봇 인증을 신청하시기 전 기준을 만족하는지 다시 한 번 확인해주세요.
+  - type: input
+    id: name
+    attributes:
+      label: 봇 이름
+      description: 봇 이름을 기재해주세요.
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: 한국 디스코드 리스트 봇 URL
+      description: 봇의 URL을 입력해주세요.
+      value: https://koreanbots.dev/bots/00000000000000000000000
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: 봇 소개
+      description: 봇의 메인 컨텐츠는 무엇인가요? 또 어떤 기능이 있나요?
+    validations:
+      required: true
+  - type: input
+    id: count
+    attributes:
+      label: 봇의 서버 및 유저 수
+      description: 현재 서버 수와 중복 유저 수(혹은 가입 유저 수)는 어떻게 되나요?
+      value: "서버: 0개 / (중복/가입) 유저: 0개"
+    validations:
+      required: true
+  - type: textarea
+    id: privacy
+    attributes:
+      label: 수집하는 개인정보
+      description: 봇이 수집하는 개인정보는 무엇인가요?
+    validations:
+      required: true
+  - type: textarea
+    id: privacy-policy
+    attributes:
+      label: 개인정보에 관한 안내
+      description: 개인정보에 관한 안내는 서비스에 어떻게 안내되어 있나요? 또한 개인정보 취급 방침을 기재해주세요!
+    validations:
+      required: true
+  - type: input
+    id: uptime
+    attributes:
+      label: 업타임
+      description: 봇의 업타임은 어느 정도 되나요?
+      placeholder: 95%
+    validations:
+      required: true
+  - type: input
+    id: hosting
+    attributes:
+      label: 호스팅
+      description: 봇이 어떠한 곳에서 호스팅 되고 있나요?
+      placeholder: AWS, GCP, Vultr etc...
+    validations:
+      required: true
+  - type: input
+    id: database
+    attributes:
+      label: 저장방식
+      description: 봇은 어떠한 저장방식을 사용하고 있나요?
+      placeholder: MySQL
+    validations:
+      required: true
+  - type: textarea
+    id: contact
+    attributes:
+      label: 유저 소통 방법
+      description: 유저는 어떤 방법으로 개발자와 소통할 수 있나요?
+      placeholder: 서포트 서버, 이메일 등...
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: 해당하는 기준
+      description: 해당되는 기준을 선택해주세요.
+      options:
+        - label: 5000개 이상의 서버
+        - label: 유저가 공식적인 지원 통로(웹사이트, 티켓 채널 등)를 통해 문의할 수 있는 방법이 존재
+        - label: 수집하는 개인정보, 이용범위, 제 3자 위탁 업체를 유저가 접근 가능한 약관에 명시
+        - label: 평균 95퍼센트 이상의 업타임
+        - label: 안전하고 신뢰할 수 있는 개인 정보 같은 데이터의 저장 방식, 호스팅 사
+        - label: 디스코드 인증된 봇
+  - type: checkboxes
+    id: agree
+    attributes:
+      label: 신뢰된 봇을 신청하기 위해 아래 항목을 확인해주세요.
+      options:
+        - label: 위 작성한 정보는 모두 사실입니다.
+          required: true
+        - label: 최근 2개월 간 신뢰된 봇에 신청한 적이 없습니다.
+          required: true
