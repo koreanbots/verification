@@ -88,9 +88,18 @@ body:
       label: 해당하는 기준
       description: 해당되는 기준을 선택해주세요.
       options:
-        - label: 1000개 이상의 서버
-        - label: 유저가 지원받을 수 있는 방법이 존재
-        - label: 수집하는 개인정보를 명시
-        - label: 평균 95 퍼센트 이상의 업타임
-        - label: 안전하고 신뢰할 수 있는 저장방식, 호스팅
+        - label: 5000개 이상의 서버
+        - label: 유저가 공식적인 지원 통로(웹사이트, 티켓 채널 등)를 통해 문의할 수 있는 방법이 존재
+        - label: 수집하는 개인정보, 이용범위, 제 3자 위탁 업체를 유저가 접근 가능한 약관에 명시
+        - label: 평균 95퍼센트 이상의 업타임
+        - label: 안전하고 신뢰할 수 있는 개인 정보 같은 데이터의 저장 방식, 호스팅 사
         - label: 디스코드 인증된 봇
+  - type: checkboxes
+    id: agree
+    attributes:
+      label: 신뢰된 봇을 신청하기 위해 아래 항목을 확인해주세요.
+      options:
+        - label: 위 작성한 정보는 모두 사실입니다.
+          required: true
+        - label: 최근 2개월 간 신뢰된 봇에 신청한 적이 없습니다.
+          required: true
