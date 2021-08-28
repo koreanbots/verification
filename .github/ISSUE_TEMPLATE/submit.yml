@@ -7,12 +7,14 @@ body:
       value: |
         봇 인증을 신청하시기 전 기준을 만족하는지 다시 한 번 확인해주세요.
   - type: input
+    id: name
     attributes:
       label: 봇 이름
       description: 봇 이름을 기재해주세요.
     validations:
       required: true
   - type: input
+    id: url
     attributes:
       label: 한국 디스코드 리스트 봇 URL
       description: 봇의 URL을 입력해주세요.
@@ -20,12 +22,14 @@ body:
     validations:
       required: true
   - type: textarea
+    id: description
     attributes:
       label: 봇 소개
       description: 봇의 메인 컨텐츠는 무엇인가요? 또 어떤 기능이 있나요?
     validations:
       required: true
   - type: input
+    id: count
     attributes:
       label: 봇의 서버 및 유저 수
       description: 현재 서버 수와 중복 유저 수(혹은 가입 유저 수)는 어떻게 되나요?
@@ -33,18 +37,21 @@ body:
     validations:
       required: true
   - type: textarea
+    id: privacy
     attributes:
       label: 수집하는 개인정보
       description: 봇이 수집하는 개인정보는 무엇인가요?
     validations:
       required: true
   - type: textarea
+    id: privacy-policy
     attributes:
       label: 개인정보에 관한 안내
       description: 개인정보에 관한 안내는 서비스에 어떻게 안내되어 있나요? 또한 개인정보취급방침을 기재해주세요!
     validations:
       required: true
   - type: input
+    id: uptime
     attributes:
       label: 업타임
       description: 봇의 업타임은 어느 정도 되나요?
@@ -52,6 +59,7 @@ body:
     validations:
       required: true
   - type: input
+    id: hosting
     attributes:
       label: 호스팅
       description: 봇이 어떠한 곳에서 호스팅 되고 있나요?
@@ -59,6 +67,7 @@ body:
     validations:
       required: true
   - type: input
+    id: database
     attributes:
       label: 저장방식
       description: 봇은 어떠한 저장방식을 사용하고 있나요?
