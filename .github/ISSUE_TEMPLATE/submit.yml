@@ -1,0 +1,87 @@
+name: 봇 인증 신청
+description: 봇 인증을 신청합니다.
+title: 봇 이름으로 변경해주세요
+body:
+  - type: markdown
+    attributes:
+      value: |
+        봇 인증을 신청하시기 전 기준을 만족하는지 다시 한 번 확인해주세요.
+  - type: input
+    attributes:
+      label: 봇 이름
+      description: 봇 이름을 기재해주세요.
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: 한국 디스코드 리스트 봇 URL
+      description: 봇의 URL을 입력해주세요.
+      value: https://koreanbots.dev/bots/00000000000000000000000
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 봇 소개
+      description: 봇의 메인 컨텐츠는 무엇인가요? 또 어떤 기능이 있나요?
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: 봇의 서버 및 유저 수
+      description: 현재 서버 수와 중복 유저 수(혹은 가입 유저 수)는 어떻게 되나요?
+      value: "서버: 0개 / (중복/가입) 유저: 0개"
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 수집하는 개인정보
+      description: 봇이 수집하는 개인정보는 무엇인가요?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 개인정보에 관한 안내
+      description: 개인정보에 관한 안내는 서비스에 어떻게 안내되어 있나요? 또한 개인정보취급방침을 기재해주세요!
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: 업타임
+      description: 봇의 업타임은 어느 정도 되나요?
+      placeholder: 95%
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: 호스팅
+      description: 봇이 어떠한 곳에서 호스팅 되고 있나요?
+      placeholder: AWS, GCP, Vultr etc...
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: 저장방식
+      description: 봇은 어떠한 저장방식을 사용하고 있나요?
+      placeholder: MySQL
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 유저 소통 방법
+      description: 유저는 어떤 방법으로 개발자와 소통할 수 있나요?
+      placeholder: 서포트 서버, 이메일 등...
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: 해당하는 기준
+      description: 해당되는 기준을 선택해주세요.
+      multiple: true
+      options:
+        - label: 1000개 이상의 서버
+        - label: 유저가 지원받을 수 있는 방법이 존재
+        - label: 수집하는 개인정보를 명시
+        - label: 평균 95 퍼센트 이상의 업타임
+        - label: 안전하고 신뢰할 수 있는 저장방식, 호스팅
+        - label: 디스코드 인증된 봇
