@@ -1,0 +1,21 @@
+name: Add comment
+on:
+  issues:
+    types:
+      - labeled
+jobs:
+  add-comment
+    if: github.event.label.name == '거부'
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Add comment
+        uses: peter-evans/create-or-update-comment@v1
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            아쉽지만 신청이 거부되셨습니다 :cry: 
+
+            다시 신청하시고 싶으시다면 거부 시점 기준 2달 이후에 신청하실 수 있습니다.
+            이의가 있으시다면 댓글 남겨주세요!
