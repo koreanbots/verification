@@ -4,7 +4,7 @@ on:
     types:
       - labeled
 jobs:
-  add-comment
+  add-comment:
     if: ${{ github.event.label.name == '거부' }}
     runs-on: ubuntu-latest
     permissions:
